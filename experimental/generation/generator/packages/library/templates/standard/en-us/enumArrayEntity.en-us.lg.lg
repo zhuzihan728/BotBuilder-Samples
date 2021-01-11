@@ -14,15 +14,22 @@ ${chooseEntity()}
 # chooseEntity
 - ```
 # ${property}Entity_chooseEntity
-- \${chooseEnumArrayEntity(${concat("'", property, "'")})}
+> Choose between multiple '${property}Entity' values
+- \${chooseEnumArrayEntity()}
 ```
 
 # propertyEntityValue
+-```
+# ${property}Entity_Value(entity) 
+- \${value(entity.value)}
+```
+
+# propertyEnumValue
 - ${join([namePlusSwitch(), cases(), default()], EOL())}${EOL()}
 
 # namePlusSwitch
 -```
-# ${property}Entity_Value(value) 
+# ${property}Enum_Value(value) 
 - SWITCH: \${value}```
 
 # case(option)
